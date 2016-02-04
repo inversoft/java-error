@@ -16,12 +16,12 @@
 package com.inversoft.error;
 
 
-import org.primeframework.json.ToString;
-
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import org.primeframework.json.ToString;
 
 /**
  * Standard error domain object that can also be used as the response from an API call.

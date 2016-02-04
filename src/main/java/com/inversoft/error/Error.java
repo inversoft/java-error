@@ -15,11 +15,12 @@
  */
 package com.inversoft.error;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Arrays;
+
 import org.primeframework.json.JacksonConstructor;
 import org.primeframework.json.ToString;
 
-import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Defines an error.
