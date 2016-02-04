@@ -1,4 +1,4 @@
-## Prime Error ![semver 2.0.0 compliant](http://img.shields.io/badge/semver-2.0.0-brightgreen.svg?style=flat-square)
+## Inversoft Java Error ![semver 2.0.0 compliant](http://img.shields.io/badge/semver-2.0.0-brightgreen.svg?style=flat-square)
 Common Error model for Inversoft projects.
 
 **Note:** This project uses the Savant build tool. To compile using using Savant, follow these instructions:
