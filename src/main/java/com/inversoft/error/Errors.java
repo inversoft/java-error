@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013-2015, Inversoft Inc., All Rights Reserved
+ * Copyright (c) 2013-2016, Inversoft Inc., All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import org.primeframework.json.ToString;
+import com.inversoft.json.ToString;
 
 /**
  * Standard error domain object that can also be used as the response from an API call.

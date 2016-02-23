@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013-2015, Inversoft Inc., All Rights Reserved
+ * Copyright (c) 2013-2016, Inversoft Inc., All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,10 +17,9 @@ package com.inversoft.error;
 
 import java.util.Arrays;
 
-import org.primeframework.json.JacksonConstructor;
-import org.primeframework.json.ToString;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.inversoft.json.JacksonConstructor;
+import com.inversoft.json.ToString;
 
 /**
  * Defines an error.
