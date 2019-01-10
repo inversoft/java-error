@@ -6,7 +6,7 @@
 
   <groupId>com.inversoft</groupId>
   <artifactId>java-error</artifactId>
-  <version>2.2.0</version>
+  <version>2.2.1</version>
   <packaging>jar</packaging>
 
   <name>Inversoft Java Error</name>
@@ -60,7 +60,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <version>2.4.2</version>
+      <version>2.9.6</version>
     </dependency>
     <dependency>
       <groupId>com.inversoft</groupId>

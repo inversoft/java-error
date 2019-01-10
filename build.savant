@@ -1,9 +1,9 @@
 /*
- * Copyright (c) 2015-2016, Inversoft Inc., All Rights Reserved
+ * Copyright (c) 2015-2019, Inversoft Inc., All Rights Reserved
  */
-savantVersion = "0.4.4"
+savantVersion = "1.0.0"
 
-project(group: "com.inversoft", name: "java-error", version: "2.2.0", licenses: ["ApacheV2_0"]) {
+project(group: "com.inversoft", name: "java-error", version: "2.2.1", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
@@ -14,7 +14,7 @@ project(group: "com.inversoft", name: "java-error", version: "2.2.0", licenses: 
 
   dependencies {
     group(name: "compile", export: false) {
-      dependency(id: "com.fasterxml.jackson.core:jackson-annotations:2.4.2")
+      dependency(id: "com.fasterxml.jackson.core:jackson-annotations:2.9.6")
       dependency(id: "com.inversoft:jackson5:2.3.0")
     }
   }
@@ -26,9 +26,9 @@ project(group: "com.inversoft", name: "java-error", version: "2.2.0", licenses: 
 }
 
 // Plugins
-dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:${savantVersion}")
-java = loadPlugin(id: "org.savantbuild.plugin:java:${savantVersion}")
-idea = loadPlugin(id: "org.savantbuild.plugin:idea:${savantVersion}")
+dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.0.2")
+java = loadPlugin(id: "org.savantbuild.plugin:java:1.0.2")
+idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
 release = loadPlugin(id: "org.savantbuild.plugin:release-git:${savantVersion}")
 
 java.settings.javaVersion = "1.8"
