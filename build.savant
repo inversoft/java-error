@@ -3,7 +3,7 @@
  */
 savantVersion = "1.0.0"
 
-project(group: "com.inversoft", name: "java-error", version: "2.2.1", licenses: ["ApacheV2_0"]) {
+project(group: "com.inversoft", name: "java-error", version: "2.2.2", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
@@ -14,8 +14,8 @@ project(group: "com.inversoft", name: "java-error", version: "2.2.1", licenses: 
 
   dependencies {
     group(name: "compile", export: false) {
-      dependency(id: "com.fasterxml.jackson.core:jackson-annotations:2.9.6")
-      dependency(id: "com.inversoft:jackson5:2.3.0")
+      dependency(id: "com.fasterxml.jackson.core:jackson-annotations:2.10.1")
+      dependency(id: "com.inversoft:jackson5:2.4.4")
     }
   }
 
