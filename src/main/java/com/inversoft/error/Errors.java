@@ -67,6 +67,9 @@ public class Errors {
    * <p>
    * This is a little loose, making the caller know which code prefixes the Validator is using, an enum or something
    * might work nicely... for now keeping this.
+   *
+   * @param codePrefix the code prefix.
+   * @return true if an error code with this prefix exists in general or field errors.
    */
   public boolean containsError(String codePrefix) {
     for (Error error : generalErrors) {
