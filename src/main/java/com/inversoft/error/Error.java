@@ -16,6 +16,8 @@
 package com.inversoft.error;
 
 import java.util.Arrays;
+import java.util.Map;
+import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.inversoft.json.JacksonConstructor;
@@ -28,6 +30,8 @@ import com.inversoft.json.ToString;
  */
 public class Error {
   public String code;
+
+  public Map<String, Object> data;
 
   public String message;
 
@@ -51,18 +55,13 @@ public class Error {
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-
     Error error = (Error) o;
-
-    return code.equals(error.code) &&
-        (message != null ? message.equals(error.message) : error.message == null) &&
-        Arrays.equals(values, error.values);
+    return Objects.equals(code, error.code) && Objects.equals(data, error.data) && Objects.equals(message, error.message) && Arrays.equals(values, error.values);
   }
 
   @Override
   public int hashCode() {
-    int result = code.hashCode();
-    result = 31 * result + (message != null ? message.hashCode() : 0);
+    int result = Objects.hash(code, data, message);
     result = 31 * result + Arrays.hashCode(values);
     return result;
   }
