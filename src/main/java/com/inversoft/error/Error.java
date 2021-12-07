@@ -45,6 +45,13 @@ public class Error {
   public Error() {
   }
 
+  public Error(String code, String message, Map<String, Object> data, Object... values) {
+    this.code = code;
+    this.data = data;
+    this.message = message;
+    this.values = values;
+  }
+
   public Error(String code, String message, Object... values) {
     this.code = code;
     this.message = message;

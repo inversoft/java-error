@@ -46,16 +46,14 @@ public class Errors {
     return this;
   }
 
-  public Errors addFieldError(String field, String code, String message, Object... values) {
-    List<Error> errors = fieldErrors.get(field);
-    if (errors == null) {
-      errors = new LinkedList<>();
-      fieldErrors.put(field, errors);
-    }
-
-    errors.add(new Error(code, message, values));
-
+  public Errors addFieldError(String field, String code, String message, Map<String, Object> data, Object... values) {
+    List<Error> errors = fieldErrors.computeIfAbsent(field, k -> new LinkedList<>());
+    errors.add(new Error(code, message, data, values));
     return this;
+  }
+
+  public Errors addFieldError(String field, String code, String message, Object... values) {
+    return addFieldError(field, code, message, null, values);
   }
 
   public Errors addGeneralError(String code, String message, Object... values) {
@@ -103,6 +101,21 @@ public class Errors {
 
     Errors errors = (Errors) o;
     return fieldErrors.equals(errors.fieldErrors) && generalErrors.equals(errors.generalErrors);
+  }
+
+  public Error getFieldError(String field, String code) {
+    List<Error> errors = fieldErrors.get(field);
+    if (errors == null) {
+      return null;
+    }
+
+    for (Error fieldError : errors) {
+      if (fieldError.code.equals(code)) {
+        return fieldError;
+      }
+    }
+
+    return null;
   }
 
   @Override
