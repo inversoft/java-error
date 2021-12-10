@@ -7,7 +7,7 @@ project(group: "com.inversoft", name: "java-error", version: "2.2.3", licenses: 
   workflow {
     fetch {
       cache()
-      url(url: "https://external.savant.fusionauth.io")
+      url(url: "https://repository.savantbuild.org")
     }
     publish {
       cache()
@@ -15,7 +15,7 @@ project(group: "com.inversoft", name: "java-error", version: "2.2.3", licenses: 
   }
 
   publishWorkflow {
-    subversion(repository: "https://external.svn.fusionauth.io")
+    subversion(repository: "https://svn.savantbuild.org")
   }
 
   dependencies {
