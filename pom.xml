@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Copyright (c) 2025, Inversoft Inc., All Rights Reserved
-  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.inversoft</groupId>
@@ -68,11 +64,17 @@
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
       <version>2.10.1</version>
+      <type>jar</type>
+      <scope>compile</scope>
+      <optional>false</optional>
     </dependency>
     <dependency>
       <groupId>com.inversoft</groupId>
       <artifactId>jackson5</artifactId>
       <version>2.4.4</version>
+      <type>jar</type>
+      <scope>compile</scope>
+      <optional>false</optional>
     </dependency>
   </dependencies>
 
@@ -163,5 +165,3 @@
   </profiles>
 
 </project>
-
-
